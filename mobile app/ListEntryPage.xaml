@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_app.ListEntryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga programare" Clicked="OnProgramareAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="ProgramareView" Margin="20" ItemSelected="OnProgramareItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Cod}" Detail="{Binding Denumire}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
